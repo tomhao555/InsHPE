@@ -1,0 +1,1 @@
+python3 train_dagt.py --gpu 0 --dataset IncNYU --dataset_path your_path/datasets/IncNYU --stacks 3 --model_name handdagt_tgdnet  --step_size 30 --backbone_pth nyu_image_nyu_joint_23_eval_14_model.pth --add_info tgdnet_0.8_0.2_all_0.1_lr_0.001_step_30_clean_true_lr_0.0005
