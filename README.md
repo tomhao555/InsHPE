@@ -1,20 +1,20 @@
-# InsHPE
 
-## 项目简介
+# InsHPE: Hand Pose Estimation Project
 
-InsHPE是一个基于深度学习的手部姿态估计项目，支持多种数据集和模型架构。该项目实现了从深度图像中估计手部关节3D位置的功能，适用于手部跟踪、手势识别等应用场景。
+## Introduction
 
+InsHPE is a deep learning-based hand pose estimation project that supports multiple datasets and model architectures. This project implements the functionality of estimating 3D hand joint positions from depth images, making it suitable for applications such as hand tracking and gesture recognition.
 
-```
+## Requirements
 
-## 环境要求
+### System Requirements
 
-### 系统要求
-- Python 3.7+
-- CUDA 10.0+ (推荐)
-- Linux/Windows/macOS
+  - Python 3.7+
+  - CUDA 10.0+ (Recommended)
+  - Linux/Windows/macOS
 
-### 依赖包
+### Dependencies
+
 ```bash
 torch>=1.8.0
 torchvision>=0.9.0
@@ -22,18 +22,21 @@ numpy
 opencv-python
 tqdm
 tensorboardX
-thop  # 用于FLOPs计算
+thop  # For FLOPs calculation
 ```
 
-### 安装依赖
+### Installation
+
 ```bash
 pip install torch torchvision numpy opencv-python tqdm tensorboardX thop
 ```
 
-## 数据集准备
+## Dataset Preparation
 
-### 1. NYU数据集
-将NYU数据集放置在 `your_path/datasets/nyu/` 目录下，确保包含以下结构：
+### 1\. NYU Dataset
+
+Place the NYU dataset in the `your_path/datasets/nyu/` directory. Ensure it follows the structure below:
+
 ```
 nyu/
 ├── train/
@@ -46,27 +49,32 @@ nyu/
 └── joints_data.mat
 ```
 
-### 2. IncNYU数据集
-将IncNYU数据集放置在 `your_path/datasets/IncNYU/` 目录下。
+### 2\. IncNYU Dataset
 
-### 3. DexYCB数据集
-将DexYCB数据集放置在 `your_path/datasets/dexycb/` 目录下。
+Place the IncNYU dataset in the `your_path/datasets/IncNYU/` directory.
 
-## 使用方法
+### 3\. DexYCB Dataset
 
-### 1. 训练模型
+Place the DexYCB dataset in the `your_path/datasets/dexycb/` directory.
 
-#### 训练NYU数据集
+## Usage
+
+### 1\. Training
+
+#### Train on NYU Dataset
+
 ```bash
 bash train_nyu.sh
 ```
 
-#### 训练IncNYU数据集
+#### Train on IncNYU Dataset
+
 ```bash
 bash train_IncNYU.sh
 ```
 
-#### 自定义训练参数
+#### Custom Training Parameters
+
 ```bash
 python3 train.py \
     --gpu 0 \
@@ -77,19 +85,22 @@ python3 train.py \
     --step_size 40 \
 ```
 
-### 2. 评估模型
+### 2\. Evaluation
 
-#### 评估NYU数据集
+#### Evaluate on NYU Dataset
+
 ```bash
 bash test_nyu.sh
 ```
 
-#### 评估IncNYU数据集
+#### Evaluate on IncNYU Dataset
+
 ```bash
 bash test_IncNYU.sh
 ```
 
-#### 自定义评估参数
+#### Custom Evaluation Parameters
+
 ```bash
 python3 eval.py \
     --gpu 0 \
