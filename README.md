@@ -1,9 +1,9 @@
 
-# InsHPE: Hand Pose Estimation Project
+# InsHaPE: Hand Pose Estimation Project
 
 ## Introduction
 
-InsHPE is a deep learning-based hand pose estimation project that supports multiple datasets and model architectures. This project implements the functionality of estimating 3D hand joint positions from depth images, making it suitable for applications such as hand tracking and gesture recognition.
+InsHaPE is a deep learning-based hand pose estimation project that supports multiple datasets and model architectures. This project implements the functionality of estimating 3D hand joint positions from depth images, making it suitable for applications such as hand tracking and gesture recognition.
 
 ## Requirements
 
@@ -53,9 +53,6 @@ nyu/
 
 Place the IncNYU dataset in the `your_path/datasets/IncNYU/` directory.
 
-### 3\. DexYCB Dataset
-
-Place the DexYCB dataset in the `your_path/datasets/dexycb/` directory.
 
 ## Usage
 
